@@ -32,3 +32,4 @@ Improved operational efficiency and energy savings
 Significant reduction in grease consumption
 
 User-friendly system operable by personnel with minimal technical experience
+![LCD Display](media/LCD_Display.jpg)
