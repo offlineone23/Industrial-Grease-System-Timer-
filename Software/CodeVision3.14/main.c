@@ -107,7 +107,8 @@ void deactivate_channel(Channel *ch)
 // Check all channels for activation based on current time
 void check_channels(void)
 {
-    for(int i=0;i<MAX_CHANNELS;i++)
+int i=0;
+    for(i=0;i<MAX_CHANNELS;i++)
     {
         Channel *ch=&channels[i];
         if(h==ch->hour && m==ch->minute && ch->flag==0)
@@ -123,10 +124,11 @@ void check_channels(void)
 
 void main(void)
 {
+int i=0;
     SETTING();
 
     // Initialize channel times
-    for(int i=0;i<MAX_CHANNELS;i++)
+    for(i=0;i<MAX_CHANNELS;i++)
     {
         channels[i].hour = channels[i].ch_hour;
         channels[i].minute = channels[i].ch_minute;
@@ -149,7 +151,7 @@ void main(void)
         {
             case 2: if(cntr==0) flag=3; else cntr--; break;
             case 3:
-                for(int i=0;i<MAX_CHANNELS;i++)
+                for(i=0;i<MAX_CHANNELS;i++)
                 {
                     if(channels[i].flag==1)
                         deactivate_channel(&channels[i]);
